@@ -105,7 +105,6 @@ class MarketApi:
         retry=retry_if_exception_type(requests.exceptions.RequestException)
     )
     def get_my_orders(self, page: int = 0) -> dict:
-        # PAGE
         resp = self._session.get(f'{self._base_url}v2/get-orders?key={self._key}')
         resp.raise_for_status()
         return resp.json()
@@ -116,7 +115,6 @@ class MarketApi:
         retry=retry_if_exception_type(requests.exceptions.RequestException)
     )
     def set_order(self, market_hash_name: str, count: int, price: int | None) -> dict:
-        # print("ЗАПРОС: ", market_hash_name, round(price/100) if price else None)
         if price:
             resp = self._session.post(
                 f'{self._base_url}v2/set-order?key={self._key}&market_hash_name={market_hash_name}&count={count}&price={price}')
