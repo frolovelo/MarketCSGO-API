@@ -7,8 +7,11 @@ CSGO Market API SDK — это Python-библиотека (SDK), предназ
 - История операций
 
 Библиотека построена на базовом requests, с автоматической повторной попыткой в случае сетевых сбоев благодаря tenacity.
+
 Платформа: https://market.csgo.com
+
 Документация: https://market.csgo.com/ru/api
+
 Создать API KEY: https://market.csgo.com/ru/api/content/start#apigen
 
 Пример использования:
